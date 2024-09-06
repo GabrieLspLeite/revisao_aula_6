@@ -10,6 +10,13 @@ def adicionar_livro(titulo, autor):
     livros.append(livro)
     print("Livro adicionado com sucesso!")
 
+def listar_livros():
+    if not livros:
+        print("Não há livros cadastrados.")
+    else:
+        for livro in livros:
+            print(f"Título: {livro['titulo']}, Autor: {livro['autor']}")
+
 
 while True:
     menu()
