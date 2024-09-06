@@ -36,7 +36,7 @@ while True:
     elif opcao == "2":
         listar_livros()
     elif opcao == "3":
-        print("Funcionalidade em desenvolvimento")
+        remover_livro()
     elif opcao == "4":
         break
     else:
