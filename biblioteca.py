@@ -1,21 +1,22 @@
 def menu():
     print("1. Adicionar livro")
     print("2. Listar livros")
-    print("3. Sair")
+    print("3. Remover livro")
+    print("4. Sair")
 
 livros = []
 
-def adicionar_livro(titulo, autor):
-    livro = {"titulo": titulo, "autor": autor}
+def adicionar_livro():
+    livro = input("Digite o título do livro")
     livros.append(livro)
     print("Livro adicionado com sucesso!")
 
 def listar_livros():
-    if not livros:
+    if len(livros) == 0:
         print("Não há livros cadastrados.")
     else:
-        for livro in livros:
-            print(f"Título: {livro['titulo']}, Autor: {livro['autor']}")
+        for i in livros:
+            print(i)
 
 
 while True:
@@ -23,14 +24,12 @@ while True:
     opcao = input("Escolha uma opção: ")
 
     if opcao == "1":
-        # Implementação da função adicionar_livro virá em um branch separado
-        print("Funcionalidade em desenvolvimento...")
+        adicionar_livro()
     elif opcao == "2":
-        # Implementação da função listar_livros virá em um branch separado
-        print("Funcionalidade em desenvolvimento...")
+        listar_livros()
     elif opcao == "3":
+        print("Funcionalidade em desenvolvimento")
+    elif opcao == "4":
         break
     else:
         print("Opção inválida.")
-
-# Funções adicionar_livro e listar_livros serão implementadas em branches separados
