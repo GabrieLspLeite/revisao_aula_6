@@ -18,6 +18,14 @@ def listar_livros():
         for i in livros:
             print(i)
 
+def remover_livro():
+    livro = input("Digite o título do livro")
+    if livro in livros:
+        livros.remove(livro)
+        print("Livro removido com sucesso!")
+    else:
+        print("Livro não adicionado previamente")
+
 
 while True:
     menu()
