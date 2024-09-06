@@ -3,6 +3,14 @@ def menu():
     print("2. Listar livros")
     print("3. Sair")
 
+livros = []
+
+def adicionar_livro(titulo, autor):
+    livro = {"titulo": titulo, "autor": autor}
+    livros.append(livro)
+    print("Livro adicionado com sucesso!")
+
+
 while True:
     menu()
     opcao = input("Escolha uma opção: ")
